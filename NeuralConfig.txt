@@ -1,0 +1,1 @@
+inputLayerTF self.output =  1/(1+2.71828**(-self.N))

@@ -1,0 +1,20 @@
+#! /usr/bin/python3.5
+
+import sqlite3, GeneralProcesses
+
+def trait1(connection,pageID,rExpr):
+    query = "SELECT tags FROM tags WHERE pageID = ':pageID'"
+    tagList = connection.query(query,(pageID))
+    tags = tagList.split(',')
+    tagCount = 0
+    
+    for tag in tags:
+        if re.match(rExpr,tag):
+            tagCount +=1
+    return tagCount / len(tags)
+
+
+
+
+def trait2(connection,pageID,rExpr):
+    

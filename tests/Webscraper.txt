@@ -1,0 +1,4 @@
+thisisnot            notvalid
+google.com           valid
+HTTPS://this.com     valid
+https://google.com   valid

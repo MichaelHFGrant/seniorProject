@@ -1,0 +1,5 @@
+inputLayerTF "self.output =  1/(1+2.71828**(-self.N))"
+HiddenLayerTF "self.output =  1/(1+2.71828**(-self.N))"
+outputLayerTF "self.output = abs(math.floor(1/(1+2.71828**(-self.N))/(1-.5)))"
+inputLayerBPF "temp+= weights[y][x]*sensitivitys[y]*(1-output)*output"
+hiddenLayerBPF "temp+= weights[y][x]*sensitivitys[y]*(1-output)*output"
